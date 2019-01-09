@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <script type="text/javascript">
+            function createPTag(){
+                 pTag = document.createElement("p");
+            }
+
+            function editPara(){
+
+                let node = document.createTextNode(document.getElementById("inputField").value);
+                
+                pTag.appendChild(node);
+
+                let stuff = document.getElementById("anchor");
+
+                stuff.appendChild(pTag);
+
+                // node.appendChild(pTag);
+            }
+
+            function deletePara(){
+                pTag.removeChild();
+            }
+</script>
+    </head>
+<body>
+    <p id ="anchor" ></p>
+    <input id="inputField" value =""></input>
+    <input type="button" onclick="createPTag()" value = "Create Paragraph Tag">
+    <input type="button" onclick="editPara()" value = "Edit Paragraph Tag">
+    <input type="button" onclick="deletePara()" value = "Delete Paragraph Tag">
+</body>
+</html>
